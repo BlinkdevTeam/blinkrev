@@ -4,18 +4,42 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #191919;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Aileron', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 6px;
+  /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #ffffff;
+  /* Light gray for the track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #f2f2f2;
+  /* Darker gray for the thumb */
+  border-radius: 2px;
+  /* Rounded corners for the thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #a30a24;
+  /* Darker gray when hovering over the thumb */
 }
