@@ -1,4 +1,5 @@
 import TeamPage from "./team";
+import TeamPage2 from "./team2";
 
 const StudioPage = () => {
   const coreValues = [
@@ -139,7 +140,8 @@ const StudioPage = () => {
       </section>
       <div className="flex flex-col justify-center items-center">
         <div className="max-w-[1020px]">
-          <TeamPage />
+          {/* <TeamPage /> */}
+          <TeamPage2 />
         </div>
       </div>
     </>

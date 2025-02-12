@@ -40,7 +40,7 @@ const CareersPage = () => {
     <section className="flex flex-col items-center p-6">
       <div className="max-w-[1020px] flex flex-col gap-12">
         {/* Hero Section */}
-        <div className="grid md:grid-cols-2 gap-4 items-center py-20">
+        <div className="grid md:grid-cols-2 gap-10 items-center py-20">
           <div className="space-y-10">
             <h1 className="text-6xl font-bold text-[#a30a24]">Work in BCS</h1>
             <p>
@@ -58,9 +58,9 @@ const CareersPage = () => {
         </div>
 
         {/* Why Work With Us */}
-        <div className="text-center py-12">
+        <div className="text-center py-12 space-y-16">
           <h1 className="text-6xl mb-6">Why work with us?</h1>
-          <ul className="list-disc text-left space-y-4">
+          <ul className="list-disc text-left space-y-10">
             <li>
               <strong>Passionate Team:</strong> Join a dedicated team of
               creative strategists, consultants, artists, storytellers, and
@@ -90,11 +90,11 @@ const CareersPage = () => {
         </div>
 
         {/* Perks and Benefits */}
-        <div className="text-center py-12">
+        <div className="text-center py-12 space-y-16">
           <h1 className="text-6xl text-[#a30a24] font-bold">
             Perks <span className="font-normal text-black">and</span> Benefits
           </h1>
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {perks.map((perk, index) => (
               <PerkItem key={index} icon={perk.icon} title={perk.title} />
             ))}

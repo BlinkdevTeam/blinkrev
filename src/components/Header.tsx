@@ -71,7 +71,7 @@ const Header = () => {
             </Link>
           ))}
           <Link
-            href="#book-now"
+            href="/book-now"
             className="hidden md:block px-[22px] py-[8px] bg-[#A30A24] text-white transform -skew-x-[20deg]"
           >
             <div className="transfrom skew-x-[20deg] font-normal">Book Now</div>

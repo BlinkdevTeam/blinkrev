@@ -22,21 +22,26 @@ const imageSetTemplate = {
 };
 
 const speechTexts = [
-  "Hello,\nWorld!",
-  "Fly with me!",
-  "Look here!",
-  "Watch out!",
-  "Follow me!",
-  "Up we go!",
-  "Where to?",
-  "Catch me!",
-  "I'm fast!",
-  "Gliding!",
-  "Soaring high!",
-  "Let's go!",
-  "Quick turn!",
-  "Wings spread!",
-  "Free as a bird!",
+  "Likas Aspiras\nFounder / CEO",
+  "Randy Villanueva\nContent Production Specialist",
+  "Aya Mulimbayan\nGraphic Artist",
+  "Jayson San Agustin\nTarpaulin",
+  "Gio Alvarez\nGraphic Artist",
+  "Andrey Lapitan\nJunior Editor",
+  "Ken Mirwell\nWeb Developer",
+  "Lander Guevarra\nFront-End Developer",
+  "Keilly Guevarra\nExecutive Assistant",
+  "Janna Regina\nJunior Accounts Specialist",
+  "Febbie Latoreno\nFinance Officer",
+  "Dominic Mataba\nAdmin Officer",
+  "Mildred Amado\nAdmin Assistant",
+  "Serdolliv Villodres\nAdmin Assistant",
+  "You?\nCreative Director",
+  "You?\nArt Director",
+  "You?\nVideo Editor",
+  "You?\nJunior Accounts Specialist",
+  "You?\nHR Associate",
+  "You?\nAdministrative Assistant",
 ];
 
 const ArrowFollower = () => {
@@ -47,7 +52,7 @@ const ArrowFollower = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    const imageSets = Array.from({ length: 15 }, (_, i) => ({ id: i + 1 }));
+    const imageSets = Array.from({ length: 20 }, (_, i) => ({ id: i + 1 }));
     setCurrentImages(
       imageSets.map((set) => ({ id: set.id, image: imageSetTemplate.up }))
     );
@@ -88,8 +93,9 @@ const ArrowFollower = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-[#f9cdad]">
-      <div className="grid grid-cols-4 grid-rows-4 gap-6">
+    <div className="w-[1020px] h-auto mb-24 flex flex-col justify-center items-center">
+      <h1 className="text-4xl font-bold text-[#a30a24] mb-8">Core Team</h1>
+      <div className="grid grid-cols-6 grid-rows-4 gap-6 my-24">
         {currentImages.map((set, index) => (
           <div
             key={set.id}
@@ -100,7 +106,7 @@ const ArrowFollower = () => {
           >
             {hoveredIndex === index && (
               <div
-                className="absolute -top-24 -right-4 bg-[#ece5ce] text-[#774f38] p-5 rounded text-sm whitespace-pre-line"
+                className="absolute -top-24 -right-4 bg-[#ece5ce] text-[#774f38] px-2 py-1 rounded text-sm whitespace-pre-line"
                 style={{
                   boxShadow: "10px 10px 0px #83af9b",
                   fontFamily: '"Baloo 2", cursive',
@@ -118,7 +124,7 @@ const ArrowFollower = () => {
             )}
             <img
               src={hoveredIndex === index ? BIRD.src : set.image.src}
-              className={`w-32 h-32 transition-all duration-0 ${
+              className={`w-32 h-32 rounded-full transition-all duration-0 ${
                 hoveredIndex === index ? "" : "filter grayscale"
               }`}
               alt="Arrow"
