@@ -42,6 +42,12 @@ const StudioPage = () => {
 
   return (
     <>
+      <div className="flex flex-col justify-center items-center cursor-crosshair">
+        <div className="max-w-[1020px]">
+          {/* <TeamPage /> */}
+          <TeamPage2 />
+        </div>
+      </div>
       <section className="flex flex-col items-center">
         <div className="max-w-[1020px] px-6 py-24">
           {/* About Us Section */}
@@ -138,12 +144,6 @@ const StudioPage = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-col justify-center items-center">
-        <div className="max-w-[1020px]">
-          {/* <TeamPage /> */}
-          <TeamPage2 />
-        </div>
-      </div>
     </>
   );
 };

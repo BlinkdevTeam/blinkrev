@@ -81,3 +81,24 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #ff8a00;
   opacity: 1;
 }
+
+.speech-bubble {
+  position: relative;
+  background: #a30a24;
+  border-radius: .4em;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 39px solid transparent;
+  border-top-color: #a30a24;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -19.5px;
+  margin-bottom: -39px;
+}
